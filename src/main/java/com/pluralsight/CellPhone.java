@@ -1,12 +1,16 @@
 package com.pluralsight;
 
 public class CellPhone {
-    private String model;
-    private String phoneNumber;
+    public String model;
+    public String phoneNumber;
     public CellPhone() {
         this.model = "";
         this.phoneNumber = "";
 
+    }
+    public CellPhone(String phoneNumber, String model) {
+        model = "";
+        phoneNumber = "";
     }
     public String getModel() {
         return model;
@@ -23,11 +27,14 @@ public class CellPhone {
     public void dial(String dialNumber) {
         System.out.printf("A phone classified as \"%s\" is calling \"%s\".\n", model, dialNumber);
     }
+    public void dial(CellPhone phoneNumber) {
+        System.out.printf("\nA phone classified as \"%s\" is calling \"%s\".\n", model, phoneNumber.getPhoneNumber());
+    }
     public static void display(CellPhone phone) {
         System.out.printf("%s's phone number is %s.\n", phone.getModel(), phone.getPhoneNumber());
     }
-    public void dialDouble(CellPhone modelBeingDialed) {
-        System.out.printf("The %s is calling the %s.", this.model, modelBeingDialed.getModel());
+    public void dialDouble(String model) {
+        System.out.printf("The %s is calling the %s.\n", this.model, model);
     }
 
 }
