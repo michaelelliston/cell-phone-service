@@ -4,8 +4,8 @@ public class CellPhone {
     private String model;
     private String phoneNumber;
     public CellPhone() {
-        String model = "";
-        String phoneNumber = "";
+        this.model = "";
+        this.phoneNumber = "";
 
     }
     public String getModel() {
@@ -21,7 +21,14 @@ public class CellPhone {
         this.model = model;
     }
     public void dial(String dialNumber) {
-        System.out.printf("A phone classified as \"%s\" is calling %s", model, phoneNumber);
+        System.out.printf("A phone classified as \"%s\" is calling \"%s\".\n", model, dialNumber);
     }
+    public static void display(CellPhone phone) {
+        System.out.printf("%s's phone number is %s.\n", phone.getModel(), phone.getPhoneNumber());
+    }
+    public void dialDouble(CellPhone modelBeingDialed) {
+        System.out.printf("The %s is calling the %s.", this.model, modelBeingDialed.getModel());
+    }
+
 }
 
