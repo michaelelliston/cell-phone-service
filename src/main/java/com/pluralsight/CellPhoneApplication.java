@@ -6,7 +6,7 @@ public class CellPhoneApplication {
     public static void main(String[] args) {
         CellPhone c1 = new CellPhone();
         CellPhone c2 = new CellPhone();
-        CellPhone c3 = new CellPhone();
+        CellPhone c3 = new CellPhone("number3", "Landline");
 
         System.out.print("Please input your Phone's Model: ");
         c1.setModel("iPhone 15");
@@ -17,8 +17,6 @@ public class CellPhoneApplication {
         System.out.print("\nPlease input the Phone Number you wish to dial: ");
         c2.setPhoneNumber("987-654-3210");
         c2.setModel("Samsung Galaxy");
-        c3.setModel("Landline");
-        c3.setPhoneNumber("543-678-9021");
 
         System.out.println("What is your Phone's Model?: " + c1.getModel() + "\nWhat is your Phone's Number?: " + c1.getPhoneNumber());
 

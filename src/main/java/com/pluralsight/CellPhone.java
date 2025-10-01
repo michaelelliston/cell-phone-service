@@ -8,10 +8,16 @@ public class CellPhone {
         this.phoneNumber = "";
 
     }
-    public CellPhone(String phoneNumber, String model) {
-        model = "";
-        phoneNumber = "";
+
+    public CellPhone(String model, String phoneNumber) {
+        this.model = model;
+        this.phoneNumber = phoneNumber;
     }
+
+    //    public CellPhone(String phoneNumber, String model) {
+//        this.model = model;
+//        phoneNumber = "";
+//    }
     public String getModel() {
         return model;
     }
